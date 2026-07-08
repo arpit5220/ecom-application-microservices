@@ -2,17 +2,24 @@
 spring:
   application:
     name: user-service
-  h2:
-    console:
-      enabled: true
-  datasource:
-      url: jdbc:h2:mem:test
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: create
+  config:
+    import: optional:configserver:http://localhost:8888
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/userdb
+#      database: userdb
 
-server:
-  port: 8082
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#      url: jdbc:h2:mem:test
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+
+#server:
+#  port: 8082
 
 

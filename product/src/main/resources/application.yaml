@@ -1,0 +1,38 @@
+#spring:
+#  application:
+#    name: product-service
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/productdb
+#    username: userarpit
+#    password: Amazonindia@5220
+#  jpa:
+#    database: POSTGRESQL
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
+#  h2:
+#    console:
+#      enabled: true
+#  datasource:
+#    url: jdbc:h2:mem:test
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: create
+
+
+
+
+
+
+# To Work with Microservices
+spring:
+  application:
+    name: product-service
+  config:
+    import: optional:configserver:http://localhost:8888
+
+
